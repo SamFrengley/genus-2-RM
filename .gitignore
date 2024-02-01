@@ -1,0 +1,3 @@
+*.sig
+.auto
+.DS_Store
