@@ -33,7 +33,7 @@ intrinsic RMWeierstrassEquationRational(D::RngIntElt, abc::SeqEnum) -> RngUPolEl
   
   P<x> := PolynomialRing(k);
 
-  f_file := CURR_DIR cat "f/" cat Sprint(D) cat ".txt";
+  f_file := CURR_DIR cat "f_abc/" cat Sprint(D) cat ".txt";
   f := eval Read(f_file);
   
   return f;
@@ -114,7 +114,7 @@ intrinsic RMWeierstrassEquation(D::RngIntElt, z::RngElt, g::RngElt, h::RngElt, r
   end if;
   
   _<x> := PolynomialRing(Parent(g));
-  F_file := CURR_DIR cat "F/" cat Sprint(D) cat ".txt";
+  F_file := CURR_DIR cat "F_zghrs/" cat Sprint(D) cat ".txt";
   F := eval Read(F_file);
   return F;
 end intrinsic;

@@ -2,9 +2,8 @@ Note that in these (sub)-directories `.txt` files should be easily loaded into a
 
 ## Sub-directories 
 The storage sub-directories are arranged as follows:
-- Files `F/D.txt` store Weierstrass models of the form $F_D(g,h,z,r,s; x)$ where you need the relations $z^2 = \lambda_D$ and $r^2 - Ds^2 = q_D$.
-- Files `F_hilb/D.txt` store Weierstrass models of the form $F_D(m,n,r,s; x)$ in the rational cases. You need the relation $r^2 - Ds^2 = p_D$.
-- Files `f/D.txt` store Weierstrass models of the form $f_D(a,b,c; x)$ in the rational cases. Here $a,b,c$ are free (but triples may correspond to the same curve).
+- Files `F_zghrs/D.txt` store Weierstrass models of the form $F_D(g,h,z,r,s; x)$ where you need the relations $z^2 = \lambda_D$ and $r^2 - Ds^2 = q_D$.
+- Files `f_abc/D.txt` store Weierstrass models of the form $f_D(a,b,c; x)$ in the rational cases. Here $a,b,c$ are free (but triples may correspond to the same curve).
   - Note that when $D = 33$ there are instead three parameters $g,h,z$ which must satisfy $z^2 = \lambda_{33}$.
 - Files `q/D.txt` store the polynomials $q_D \in \mathbb{Q}(Y_{-}(D))$ for each $D$ in Theorem 1.5.
 - Files `p/D.txt` store the polynomials $p_D \in \mathbb{Q}(Y_{-}(D))$ for each $D \leq 17$.
