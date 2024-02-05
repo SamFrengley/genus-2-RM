@@ -13,7 +13,8 @@ Our main intrinsic, which takes as input a homogeneous quadratic form `L` in 3 v
   - `"alt"`: Alternate between slope and deg2.
   - `"fwd"`: Forward-looking score (slow).
 - `randomization=false` a boolean which, if set to `true`, indicates that random jumps will be taken as described in Remark 5.9(3).
-
+- Verbose output is controlled by `ConicMinimize` which takes values 0, 1, and 2. If `MinimizationSearch` is run after `SetVerbose("ConicMinimize", 2);` then information will be given at every minimization step.
+  
 ## Other files
 
 - `mestre-conic-cubic.m`: This file contains intrinsics to compute the (IC or RM simplified) Mestre conic and cubic as defined in Section 4. The intrinsics of note are:
