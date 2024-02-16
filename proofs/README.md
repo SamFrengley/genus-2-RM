@@ -13,4 +13,4 @@ A short description of each of the subdirectories:
   - `trans-rat/` contains the transformations required to compute $p_D$.
   - `conic-param/` contains parametrisations of the conics $\mathcal{L}_D$ over the field $\mathbb{Q}(\mathscr{L}_D)$.
   - `3fold-param/` contains parametrisations for the 3-folds $r^2 - Ds^2 - p_D$ for each $D \leq 13$.
-  
+  - `3fold-param_LDH/` contains parametrisations for the 3-folds $r^2 - Ds^2 - q_D$ (viewed as hypersurfaces in $\mathbb{A}^2_{r,s} \times \mathcal{H}_D$).
