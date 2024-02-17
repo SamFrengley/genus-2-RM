@@ -57,6 +57,25 @@ intrinsic Getlambda_D(D::RngIntElt : coords:=[]) -> RngMPolElt
 end intrinsic;
 
 
+intrinsic GetUpperLambda_D(D::RngIntElt : coords:=[]) -> RngMPolElt
+{
+  Get the polynomial Λ ∈ ℚ[g,h].
+}
+  require D in [21,24,28,29,33,37,44,53,61]: "D is not in our little database";
+  if #coords eq 0 then
+    _<a,b,c> := PolynomialRing(Rationals(), 3);
+  else
+    require #coords eq 3: "Coords should have two elements, g and h";
+    a,b,c := Explode(coords);
+  end if;
+  
+  l_file := CURR_DIR cat "Lambda_abc/" cat Sprint(D) cat ".txt";
+  l := eval Read(l_file);
+
+  return l;
+end intrinsic;
+
+
 intrinsic Get_xi_phi(D::RngIntElt : coords:=[]) -> RngMPolElt
 {
   Get the polynomials ξ∈ ℚ[g,h] and φ ∈ L[x] where L = ℚ[g,h][r]/ξ(r), 
@@ -172,3 +191,5 @@ intrinsic GetHMSParam(D::RngIntElt : coords:=[]) -> SeqEnum
 
   return ret;
 end intrinsic;
+
+

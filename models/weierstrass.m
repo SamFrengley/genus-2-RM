@@ -118,3 +118,23 @@ intrinsic RMWeierstrassEquation(D::RngIntElt, z::RngElt, g::RngElt, h::RngElt, r
   F := eval Read(F_file);
   return F;
 end intrinsic;
+
+
+intrinsic RMWeierstrassEquationLambda(D::RngIntElt, zeta::RngElt, a::RngElt, b::RngElt, c::RngElt) -> RngUPolElt
+{
+  Given coordinates zeta,a,b,c such that zeta^2 = Λ , return the Weierstrass equation 
+  of a genus 2 curve RM D corresponding to that point. 
+}
+  require D in [21,28,29,37,44,53,61]: "We do not know of this model for such D";
+
+  if Type(Parent(zeta)) cmpeq FldCom then
+    assert Modulus(zeta^2 - GetUpperLambda_D(D : coords:=[a,b,c])) lt 10^(-10);
+  else
+    assert zeta^2 eq GetUpperLambda_D(D : coords:=[a,b,c]);
+  end if;
+
+  _<x> := PolynomialRing(Parent(zeta));
+  F_file := CURR_DIR cat "f_abc/" cat Sprint(D) cat ".txt";
+  F := eval Read(F_file);
+  return F;
+end intrinsic;
