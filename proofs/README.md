@@ -6,7 +6,9 @@ This directory contains code to prove the main Theorems of our paper. Due to tra
   - `1-5-thm_pD.m` proves Theorem 1.5 in the case of $p_D$ for $D \leq 17$.
     - It takes about an hour to run `1-5-thm_pD.m` due to the naive way in which the transformations are stored. If you wish only to verify the conics, then commenting out any line with `M` will speed up the calcuations markedly.
   - `1-2-coros_fD.m` prove Corollaries 1.2, 1.3, and 7.1 where we compute the functions $f_D(a,b,c; x)$ for which $C : y^2 = f_D(a,b,c; x)$.
-
+  - `1-7-question_fD.m` checks the models of the form $y^2 = f_D(a,b,c,z; x)$ which require $z^2 = \Lambda_D$.
+  - `1-7-question_param-check.m` checks the parametrisations for the 3-folds $\mathscr{L}_D$ and $\mathscr{L}_D^{\mathcal{H}}$.
+  
 A short description of each of the subdirectories:
   - `trans/` contains the trasformations required to compute $q_D$.
     - `coord-change/` contains an initial coordinate change on the base ring of the conic $L_D$ which is required to be run before `trans/` will be the correct change (see `1-5-thm_pD.m`).
