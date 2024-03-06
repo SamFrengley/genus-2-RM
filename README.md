@@ -1,4 +1,4 @@
-This is the GitHub repository containing code related to the paper [*Generic models for genus 2 curves with real multiplication*](https://arxiv.org/) by Alex Cowan, Sam Frengley, and Kimball Martin [arXiv:nnnnnn](https://arxiv.org/), [DOI:nnnnnn](https://www.doi.org/).
+This is the GitHub repository containing code related to the paper [*Generic models for genus 2 curves with real multiplication*](https://arxiv.org/abs/2403.03191) by Alex Cowan, Sam Frengley, and Kimball Martin [arXiv:2403.03191](https://arxiv.org/abs/2403.03191).
 
 Most of the code in this repository is written in [`Magma`](http://magma.maths.usyd.edu.au/magma/) though many of the files should be written in such a way as to be acessible to most computer algebra systems.
 
